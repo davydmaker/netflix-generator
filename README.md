@@ -18,7 +18,7 @@ Gerador de conta Netflix usando python2 e biblioteca Selenium v2.53.6
     Depois é só especificar o local do arquivo se for utilizar o Google como navegador.
     
 ### Executando  
-    python3 netflix-generator.py 
+    python netflix-generator.py 
     
  Se quiser utilizar o Mozilla como navegador, altere a variável browser para Firefox.  
  O Mozilla já vem por padrão na instalação com o geckodriver, então não precisa especificar.
