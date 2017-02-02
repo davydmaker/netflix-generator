@@ -57,7 +57,7 @@ def gerarNetflix(op):
 		#Terceira página
 		browser.get('https://www.netflix.com/YourAccountPayment')
 		for option in browser.find_elements_by_tag_name('div'):
-			if option.get_attribute('data-reactid') == '37' and nT == 0:
+			if option.get_attribute('data-mop-type') == 'directDebitOption' and nT == 0:
 				option.click()
 		browser.find_element_by_name('firstName').send_keys(nomes[randint(0,39)])
 		browser.find_element_by_name('lastName').send_keys(nomes[randint(0,39)])
@@ -69,7 +69,7 @@ def gerarNetflix(op):
 		select.select_by_value(tipoConta)
 		browser.find_element_by_name('accountNumber').send_keys(numeroConta)
 		browser.find_element_by_name('accountNumberCheckDigits').send_keys(digitoFinal)
-		browser.find_element_by_id('brDD-add').click()
+		browser.find_elements_by_tag_name('button')[0].click()
 		if browser.current_url == 'https://www.netflix.com/YourAccountPayment':
 			print('Não foi possível criar a conta, tentando novamente. '+str(nT)+' tentativa(s).\n')
 			nT += 1
