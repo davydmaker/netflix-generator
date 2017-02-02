@@ -14,7 +14,8 @@ Gerador de conta Netflix usando python2 e biblioteca Selenium v2.53.6
     `cd netflix-generator`
  
 ### Baixar ChromeDriver  
-    Acesse https://sites.google.com/a/chromium.org/chromedriver/downloads para baixar o chromedriver.exe, depois é só especificar o local do arquivo se for utilizar o Google como navegador.
+    Acesse https://sites.google.com/a/chromium.org/chromedriver/downloads para baixar o chromedriver.exe.    
+    Depois é só especificar o local do arquivo se for utilizar o Google como navegador.
     
 ### Executando  
     `python3 netflix-generator.py` 
