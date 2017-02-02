@@ -2,21 +2,21 @@
 Gerador de conta Netflix usando python2 e biblioteca Selenium v2.53.6
 
 # Preparando para usar
- 1 - Instalar lib
+  1 - Instalar lib
    `pip install selenium==2.53.6`
    
- 2 - Baixando repositório
-   `sudo apt-get install git`  
+  2 - Baixando repositório
+    `sudo apt-get install git`  
     `git clone https://github.com/DavydMaker/netflix-generator.git`  
     ou  
     `wget https://github.com/DavydMaker/netflix-generator/archive/master.zip -O netflix-generator.zip`  
     `unzip netflix-generator.zip`  
     `cd netflix-generator`
  
- 3 - Baixar ChromeDriver
+  3 - Baixar ChromeDriver
     Acesse https://sites.google.com/a/chromium.org/chromedriver/downloads para baixar o chromedriver.exe, depois é só especificar o local do arquivo se for utilizar o Google como navegador.
     
- 3 - Executando  
+  3 - Executando  
     `python3 netflix-generator.py` 
     
  Se quiser utilizar o Mozilla como navegador, altere a variável browser para Firefox.  
