@@ -25,7 +25,7 @@ def gerarNetflix(op):
 		#Primeira página
 		browser.get('https://www.netflix.com/getstarted?action=startAction&locale=pt-BR')
 		for option in browser.find_elements_by_tag_name('div'):
-			if option.get_attribute('data-reactid') == '39':
+			if option.get_attribute('data-reactid') == '44':
 				option.click()
 		browser.find_elements_by_tag_name('button')[0].click()
 		email = "netgen" + gerarString(6) + "@" + emailHosts[randint(0,14)]
