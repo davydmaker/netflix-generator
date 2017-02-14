@@ -6,12 +6,12 @@ import random
 import time
 
 __author__ = "Davyd Maker"
-__version__ = "2.0"
+__version__ = "2.1"
 
 browser = 'Chrome'
 emailHosts = ['moakt.ws', 'mohmal.com', 'divismail.ru', 'sharklasers.com', 'guerrillamail.info', 'grr.la', 'guerrillamail.biz', 'guerrillamail.com', 'guerrillamail.de', 'guerrillamail.net', 'guerrillamail.org', 'guerrillamailblock.com', 'spam4.me', 'kismail.ru', 'extremail.ru']
 nomes = ['Bertlas', 'Ewise', 'Ruthbri', 'Freamond', 'Wigfled', 'Sephra', 'Markcrow', 'Frid', 'Man', 'Ferumchael', 'Vidnald', 'Richter', 'Halwil', 'Samjohn', 'Fridsig', 'Ceolfrea', 'Sonla', 'Grimkim', 'Rahli', 'Wardu', 'Icen', 'Edhes', 'Leyfridchar', 'Gardwaru', 'Connald', 'Meriald', 'Lenles', 'Riemeri', 'Elitine', 'Macchar', 'Danan', 'Anne', 'Lauty', 'Freacyn', 'Thas', 'Phiadon', 'Brandhal', 'Ciavin', 'Shaelf', 'Joguth']
-nT = 0
+nT = 1
 
 if browser == 'Chrome':
 	browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\chromedriver.exe")
@@ -70,7 +70,7 @@ def gerarNetflix(op):
 		browser.find_element_by_name('accountNumber').send_keys(numeroConta)
 		browser.find_element_by_name('accountNumberCheckDigits').send_keys(digitoFinal)
 		browser.find_elements_by_tag_name('button')[0].click()
-		if browser.current_url == 'https://www.netflix.com/YourAccountPayment':
+		if 'orderfinal' not in browser.current_url:
 			print('Não foi possível criar a conta, tentando novamente. '+str(nT)+' tentativa(s).\n')
 			nT += 1
 			gerarNetflix(2)
@@ -78,7 +78,7 @@ def gerarNetflix(op):
 		else:
 			print('Conta criada depois de .'+str(nT)+' tentativa(s).\n')
 			print('Login: '+email)
-			print('\nSenha: '+senha)
+			print('Senha: '+senha)
 			op = 4
 
 def gerarString(qtd):
