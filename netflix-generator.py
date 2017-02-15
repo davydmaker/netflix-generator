@@ -14,9 +14,9 @@ nomes = ['Bertlas', 'Ewise', 'Ruthbri', 'Freamond', 'Wigfled', 'Sephra', 'Markcr
 nT = 1
 
 if browser == 'Chrome':
-	browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\chromedriver.exe",chrome_options=opts)
+	browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\chromedriver.exe")
 elif browser == 'Firefox':
-	browser = webdriver.Firefox(profile)
+	browser = webdriver.Firefox()
 
 def gerarNetflix(op):
 	global nT
