@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# encoding: utf-8
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from random import randint
@@ -14,9 +14,9 @@ nomes = ['Bertlas', 'Ewise', 'Ruthbri', 'Freamond', 'Wigfled', 'Sephra', 'Markcr
 nT = 1
 
 if browser == 'Chrome':
-	browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\chromedriver.exe")
+	browser = webdriver.Chrome(executable_path=r"C:\Program Files (x86)\Google\chromedriver.exe",chrome_options=opts)
 elif browser == 'Firefox':
-	browser = webdriver.Firefox()
+	browser = webdriver.Firefox(profile)
 
 def gerarNetflix(op):
 	global nT
@@ -57,7 +57,7 @@ def gerarNetflix(op):
 		#Terceira página
 		browser.get('https://www.netflix.com/YourAccountPayment')
 		for option in browser.find_elements_by_tag_name('div'):
-			if option.get_attribute('data-mop-type') == 'directDebitOption' and nT == 0:
+			if option.get_attribute('data-mop-type') == 'directDebitOption' and nT == 1:
 				option.click()
 		browser.find_element_by_name('firstName').send_keys(nomes[randint(0,39)])
 		browser.find_element_by_name('lastName').send_keys(nomes[randint(0,39)])
