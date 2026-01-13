@@ -1,3 +1,10 @@
+> [!IMPORTANT]  
+> Este script **não funciona mais** e **não será atualizado**.
+> 
+> Este projeto foi desenvolvido para estudos de automação web com Selenium entre 2015 e 2017. Na época em que foi criado, funcionou perfeitamente e serviu como um excelente aprendizado sobre web scraping e automação de navegadores.
+> 
+> O repositório hoje serve **apenas de consulta pública** para fins educacionais e como registro histórico do meu aprendizado.
+
 # Netflix Generator #
 Gerador de conta Netflix usando python2 e biblioteca Selenium v2.53.6
 
